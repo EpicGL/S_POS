@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="{% static '/img/fbm_tab_icon.jpg' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        
+        <title>{% block title %}{% endblock title %}</title>
+    </head>
+    <body>
+
+    <div class="container">
+      <style>
+        body{
+          background-color: #222831 ;
+        }
+        @media (max-width: 768px){
+          .hidephone{
+            display: none;
+          }
+          body{
+            background-color: white;
+          
+          }
+        }
+      </style>
+      <div class="hidephone">
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="mt-lg-5">
+        {% block body %}
+            
+        {% endblock body %}
+      </div>
+    </div>
+
+
+
+    <script src="{% static 'js/bootstrap/bootstrap.js' %}"></script>
+    </body>
+</html>

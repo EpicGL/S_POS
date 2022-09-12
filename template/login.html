@@ -1,0 +1,42 @@
+{% extends 'main_login.html' %}
+{% load static %}
+{% block title %}Login Page{% endblock%}
+
+
+{% block body %}
+
+<style>
+    .card{
+        background-color:#FFD310;
+    }
+</style>
+
+<div class="row d-flex">
+    <div class="col-md-3"></div>
+
+    <div class="card card-body col-3 d-flex ">
+        
+            <div class="padding-left-50"> <img class="loginimg" src="{% static 'img/fnm_logo.png' %}" alt=""> </div>
+            <br>
+            
+            <p class="text-center">Welcome to Fry Box Max, put your username and password to login</p>
+
+            <form class="form" action="" method="post">
+                {% csrf_token %}
+                <br>
+                <input class="form-control" type="text" name="username" placeholder="Username" id="">
+                <br>
+                <input class="form-control" type="password" name="password" placeholder="Password" id="">
+                <br>
+                <button class="btn btn-primary form-control" type="submit">Login</button>
+            </form>
+    
+    </div>
+
+
+
+    <div class="col-md-3"></div>
+</div>
+
+{% endblock body %}
+    

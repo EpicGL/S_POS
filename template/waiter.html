@@ -1,0 +1,66 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Waiter{% endblock%}
+
+
+{% block body %}
+<br>
+
+
+<style>
+body{
+    background-color: rgb(236, 238, 202);
+}
+</style>
+
+<div class="container-fluid row">
+    <div class="col-8">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex">
+                <h3>Welcome,</h3>
+                
+            </div>
+
+            <form class="d-flex " action="" method="get">
+                {% csrf_token %}
+                <img src="" alt="">
+                <input type="search" name="Search" placeholder="Search"id="">
+                <div>Flter</div>
+            </form>
+        </div>
+
+        <br>
+        {% if product %}
+        <div class="row">
+            {% for item in product %}
+                <div class="col-lg-3 shadow-box mb-4">
+                    <div class="position-absolute d-flex ms-1">x1</div>
+                    <div>
+                        <a href="" class="shadow"><img style="max-width:100%;" src="{{item.imageURL}}" alt=""></a>
+                        <div class="box-element shadow d-flex justify-content-between" style="border-radius: 0 0 4px 4px;">
+                            <div style="max-width: 100%;">{{item.title}}</div>
+                            <h6 class="d-flex">{{item.price}} <div class="tk-symbol">৳</div></h6cls>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+
+
+    </div>
+
+
+    <div class="col-4">
+        <div style="height: 100%;" class="card card-body">
+            <h3>Current Order </h3>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock body %}

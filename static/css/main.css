@@ -1,0 +1,27 @@
+@import 'bootstrap/bootstrap.min.css';
+
+* body{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    background-color: white;
+}
+
+.flex{
+    display: flex;
+}
+.loginimg{
+    max-width: 100px;
+    max-height: 120px;
+}
+.padding-left-50{
+    padding-left: 40%;    
+}
+
+.box-element{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
+
